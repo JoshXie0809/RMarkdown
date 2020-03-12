@@ -9,14 +9,34 @@ output:
 # R learning lecture 1
 --向量物件 --
 
-
-### R learning lecture 1-1
 ```{r}
 x<-1:10
 print(x)
-x1<-11:13
-print(x1)
-x1<--1:-5#也可以是-1
-print(x1)
 ```
 
+
+```{r}
+x<-11:13
+print(x)
+```
+
+
+```{r}
+x<--1:-5
+print(x)
+```
+也可以是-1
+
+```{r}
+x<- -1.7:-5.3
+print(x)
+```
+不足1, 不顯示
+
+```{r}
+x<-1:5
+y<-x+3
+print(x)
+print(y)
+```
+每個都 + 3
