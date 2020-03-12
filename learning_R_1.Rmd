@@ -2,15 +2,17 @@
 title: "learningR_1"
 author: "joshxie"
 date: "2020/3/12"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
-
-```{r setup, include=FALSE}
+## R learning lecture 1
+```{r }
 x <- -2.5:-3.9
-length(x)
+print(length(x))
 ```
 
-## R learning lecture 1
+
 
 
 
