@@ -113,7 +113,77 @@ baskest.NBA2016.Lin<-c(7,8,6,11,9,12)
 print(baskest.NBA2016.Lin)
 ```
 
+建立向量
+
+```{r}
+sum(baskest.NBA2016.Lin)
+```
 
 
+```{r}
+max(baskest.NBA2016.Lin)
+```
 
+
+```{r}
+min(baskest.NBA2016.Lin)
+```
+
+## prod()
+
+```{r}
+prod(1:2)
+prod(1:3)
+prod(1:4)
+prod(1:5)
+prod(1:6)
+```
+
+## cum( )
+
+```{r}
+baskest.NBA2016.Jordon<-c(10,5,9,15,7,11)
+cumsum(baskest.NBA2016.Jordon)
+cumprod(baskest.NBA2016.Jordon)
+cummax(baskest.NBA2016.Jordon)
+cummin(baskest.NBA2016.Jordon)
+```
+
+## diff( )
+
+```{r}
+baskest.NBA2016.Jordon
+diff(baskest.NBA2016.Jordon)
+```
+
+差距
+
+## 向量物件排序函數
+
+sort(x,decreasing = <font style="color:red">FALSE</font>) 小排到大
+```{r}
+baskest.NBA2016.Jordon
+sort(baskest.NBA2016.Jordon)
+```
+
+sort(x,decreasing = <font style="color:red">TRUE</font>) 大排到小
+```{r}
+baskest.NBA2016.Jordon
+sort(baskest.NBA2016.Jordon, decreasing = TRUE)
+```
+
+rank() 排名
+從小到大的排名
+
+```{r}
+baskest.NBA2016.Jordon
+rank(baskest.NBA2016.Jordon)
+```
+
+rev( ) 顛倒func
+```{r}
+x<-c(7,11,4,9,6)
+x
+rev(x)
+```
 
