@@ -166,13 +166,13 @@ baskest.NBA2016.Jordon
 sort(baskest.NBA2016.Jordon)
 ```
 
-sort(x,decreasing = <font style="color:red">TRUE</font>) 大排到小
+## sort(x,decreasing = <font style="color:red">TRUE</font>) 大排到小
 ```{r}
 baskest.NBA2016.Jordon
 sort(baskest.NBA2016.Jordon, decreasing = TRUE)
 ```
 
-rank() 排名
+## rank() 排名
 從小到大的排名
 
 ```{r}
@@ -180,10 +180,64 @@ baskest.NBA2016.Jordon
 rank(baskest.NBA2016.Jordon)
 ```
 
-rev( ) 顛倒func
+## rev( ) 顛倒func
 ```{r}
 x<-c(7,11,4,9,6)
 x
 rev(x)
 ```
+
+## length 計算向量物件的個數
+
+```{r}
+baskest.NBA2016.Jordon
+length(baskest.NBA2016.Jordon)
+```
+
+
+## sd 標準差 var 變異數
+
+```{r}
+sd(c(11,15,8))
+var(14:16)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
