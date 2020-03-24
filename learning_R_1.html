@@ -520,6 +520,38 @@ x</code></pre>
 <pre class="r"><code>var(14:16)</code></pre>
 <pre><code>## [1] 1</code></pre>
 </div>
+<div id="inf--inf-na-都是數字" class="section level2">
+<h2>Inf -Inf NA 都是數字</h2>
+<pre class="r"><code>max(c(43,98,Inf))</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<pre class="r"><code>min(c(33,98,Inf))</code></pre>
+<pre><code>## [1] 33</code></pre>
+<pre class="r"><code>sum(c(43,98,Inf))</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<pre class="r"><code>min(c(43,98,-Inf))</code></pre>
+<pre><code>## [1] -Inf</code></pre>
+<pre class="r"><code>sum(c(43,9999999999999999999999,-Inf))</code></pre>
+<pre><code>## [1] -Inf</code></pre>
+</div>
+<div id="如果向量含有na-resultna" class="section level2">
+<h2>如果向量含有NA , result=NA</h2>
+<pre class="r"><code>max(c(43,98,Inf,NA))</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>sum(c(43,98,Inf,NA))</code></pre>
+<pre><code>## [1] NA</code></pre>
+</div>
+<div id="若想向量含有na-也可以運算-na.rm-t-or-na.rm-true" class="section level2">
+<h2>若想向量含有NA , 也可以運算 <code>na.rm = T</code> or <code>na.rm = TRUE</code></h2>
+<pre class="r"><code>max(c(43,98,Inf,NA),na.rm = T)</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<pre class="r"><code>sum(c(43,98,1221,NA),na.rm = TRUE)</code></pre>
+<pre><code>## [1] 1362</code></pre>
+<p>值得注意的是：diff( ), cummax( )無法使用</p>
+</div>
+<div id="r-資料屬性" class="section level2">
+<h2>R 資料屬性</h2>
+<p>integer 整數 double 小數字 character 字串</p>
+</div>
 </div>
 
 

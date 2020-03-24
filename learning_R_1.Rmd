@@ -202,16 +202,55 @@ sd(c(11,15,8))
 var(14:16)
 ```
 
+## Inf -Inf NA 都是數字
+
+```{r}
+max(c(43,98,Inf))
+min(c(33,98,Inf))
+sum(c(43,98,Inf))
+
+min(c(43,98,-Inf))
+
+sum(c(43,9999999999999999999999,-Inf))
+```
 
 
+## 如果向量含有NA , result=NA
+```{r}
+max(c(43,98,Inf,NA))
+sum(c(43,98,Inf,NA))
+```
 
+## 若想向量含有NA , 也可以運算 ` na.rm = T` or `na.rm = TRUE`
 
+```{r}
+max(c(43,98,Inf,NA),na.rm = T)
+sum(c(43,98,1221,NA),na.rm = TRUE)
+```
 
+值得注意的是：diff( ), cummax( )無法使用
 
+## R 資料屬性
 
+integer 整數
 
+double 小數字
 
+character 字串
 
+```{r}
+x<-c("Hello R World")
+x
+length(x)
+
+x1<-c('H','e','l','l','o')
+x1
+length(x1)
+
+x2<-c('Hello',"r","world")
+x2
+length(x2)
+```
 
 
 
