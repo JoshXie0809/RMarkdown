@@ -257,8 +257,25 @@ nchar(x2)
 
 
 ## 探索物件元素的屬性
-```{r}
 
+is.integer(): 是否整數
+is.numeric(): 是否數字
+Is.double():  是否雙倍精確實數
+is.character(): 是否字串
+
+```{r}
+x1<-c(1:5)
+x2<-c(1.5, 2)
+x3=c("hello")
+is.integer(x1)
+is.integer(x2)
+is.integer(x3)
+is.numeric(x1)
+is.numeric(x2)
+is.numeric(x3)
+  
+  
+  
 ```
 
 
