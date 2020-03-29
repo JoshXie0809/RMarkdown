@@ -577,7 +577,7 @@ x2</code></pre>
 </div>
 <div id="探索物件元素的屬性" class="section level2">
 <h2>探索物件元素的屬性</h2>
-<p>is.integer(): 是否整數 is.numeric(): 是否數字 Is.double(): 是否雙倍精確實數 is.character(): 是否字串</p>
+<p>is.integer(): 是否整數 is.numeric(): 是否數字 is.double(): 是否雙倍精確實數 is.character(): 是否字串</p>
 <pre class="r"><code>x1&lt;-c(1:5)
 x2&lt;-c(1.5, 2)
 x3=c(&quot;hello&quot;)
@@ -593,6 +593,18 @@ is.integer(x1)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>is.numeric(x3)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.double(x1) </code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.double(x2) </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.double(x3) </code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.character(x1)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.character(x2)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.character(x3)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 </div>
 </div>
 

@@ -260,7 +260,7 @@ nchar(x2)
 
 is.integer(): 是否整數
 is.numeric(): 是否數字
-Is.double():  是否雙倍精確實數
+is.double():  是否雙倍精確實數
 is.character(): 是否字串
 
 ```{r}
@@ -273,8 +273,14 @@ is.integer(x3)
 is.numeric(x1)
 is.numeric(x2)
 is.numeric(x3)
-  
-  
+is.double(x1) 
+is.double(x2) 
+is.double(x3) 
+is.character(x1)
+
+is.character(x2)
+
+is.character(x3)
   
 ```
 
