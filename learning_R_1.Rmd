@@ -242,17 +242,24 @@ character 字串
 x<-c("Hello R World")
 x
 length(x)
+nchar(x)
 
 x1<-c('H','e','l','l','o')
 x1
 length(x1)
+nchar(x1)
 
 x2<-c('Hello',"r","world")
 x2
 length(x2)
+nchar(x2)
 ```
 
 
+## 探索物件元素的屬性
+```{r}
+
+```
 
 
 
