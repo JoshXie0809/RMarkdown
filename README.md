@@ -1,7 +1,7 @@
 # RMarkdown
 r markdown
 
-this the HW of NCKU, make us to learn  
+this is the HW of NCKU class, making us to learn  
 
 # `Github and Rstudio`
 
