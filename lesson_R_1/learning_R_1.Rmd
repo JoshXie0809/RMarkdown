@@ -302,6 +302,14 @@ class(c(2.5,1.5))
 class(x3)
 ```
 
+物件元素的存取
+```{r}
+number.List <- 1:25
+number.List
+
+```
+
+
 
 
 
