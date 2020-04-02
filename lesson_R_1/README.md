@@ -62,8 +62,8 @@ print(y)
 
 ```
 
-3 and 6, 6=3*k
-if b=a*K?
+3 and 6, 6<-3*k
+if b<-a*K?
 
 ```r
 
@@ -81,25 +81,25 @@ seq(1,9)
 from 1 to 9
 
 ```r
-seq(1, 9, by = 2)
+seq(1, 9, by <- 2)
 ```
 
 from 1 to 9, by 2
 
 ```r
-seq(1, 9, by = pi)
+seq(1, 9, by <- pi)
 ```
 
 from 1 to 9, by $\pi$ 
 
 ```r
-seq(1, 9, by = 0.5)
+seq(1, 9, by <- 0.5)
 ```
 
 from 1 to 9, by 0.5
 
 ```r
-seq(1, 9, length.out = 4)
+seq(1, 9, length.out <- 4)
 ```
 
 from 1 to 9, has four numbers.
@@ -158,16 +158,16 @@ diff(baskest.NBA2016.Jordon)
 
 ## 向量物件排序函數
 
-sort(x,decreasing = <font style="color:red">FALSE</font>) 小排到大
+sort(x,decreasing <- <font style<-"color:red">FALSE</font>) 小排到大
 ```r
 baskest.NBA2016.Jordon
 sort(baskest.NBA2016.Jordon)
 ```
 
-## sort(x,decreasing = <font style="color:red">TRUE</font>) 大排到小
+## sort(x,decreasing <- <font style<-"color:red">TRUE</font>) 大排到小
 ```r
 baskest.NBA2016.Jordon
-sort(baskest.NBA2016.Jordon, decreasing = TRUE)
+sort(baskest.NBA2016.Jordon, decreasing <- TRUE)
 ```
 
 ## rank() 排名
@@ -213,17 +213,17 @@ sum(c(43,9999999999999999999999,-Inf))
 ```
 
 
-## 如果向量含有NA , result=NA
+## 如果向量含有NA , result<-NA
 ```r
 max(c(43,98,Inf,NA))
 sum(c(43,98,Inf,NA))
 ```
 
-## 若想向量含有NA , 也可以運算 ` na.rm = T` or `na.rm = TRUE`
+## 若想向量含有NA , 也可以運算 ` na.rm <- T` or `na.rm <- TRUE`
 
 ```r
-max(c(43,98,Inf,NA),na.rm = T)
-sum(c(43,98,1221,NA),na.rm = TRUE)
+max(c(43,98,Inf,NA),na.rm <- T)
+sum(c(43,98,1221,NA),na.rm <- TRUE)
 ```
 
 值得注意的是：diff( ), cummax( )無法使用
@@ -264,7 +264,7 @@ is.character(): 是否字串
 ```r
 x1<-c(1:5)
 x2<-c(1.5, 2)
-x3=c('Hello',"r","world")
+x3<-c('Hello',"r","world")
 is.integer(x1)
 is.integer(x2)
 is.integer(x3)
@@ -357,16 +357,16 @@ x[x<10]
 ```
 
 
-## any( ) 的運用： 只要一個TRUE = 傳回TRUE
+## any( ) 的運用： 只要一個TRUE <- 傳回TRUE
 ```r
-x = c(1,11,111,111,11111,999999999999999)
+x <- c(1,11,111,111,11111,999999999999999)
 any(x>999999)
 
 ```
 ## 不同向量長度 的向量 相成：必須是倍數關係
 ```r
 basket.ball.Jordon<-c(1,2,3,4,5,6)
-# odd ->2pt; even->3pt
+# odd ->2pt; even->3pt<-
 score <- basket.ball.Jordon*c(2,3)
 
 score.Averge.Jordon <- sum(score)/6
@@ -376,7 +376,7 @@ score.Averge.Jordon
 
 ## 向量物件 的元素名
 ```r
-baskest.NBA.Jordon = c(first = 20, second = 30, third =35)
+baskest.NBA.Jordon <- c(first <- 20, second <- 30, third <-35)
 baskest.NBA.Jordon[1]
 baskest.NBA.Jordon[2]
 baskest.NBA.Jordon[3]
@@ -385,15 +385,15 @@ baskest.NBA.Jordon[3]
 ```r
 names(baskest.NBA.Jordon)
 ## names() generate a c()->vector
-names(baskest.NBA.Jordon)[c(1,2)] = c("1st", '2nd')
+names(baskest.NBA.Jordon)[c(1,2)] <- c("1st", '2nd')
 names(baskest.NBA.Jordon)
 ```
 
 ## 月曆
 ```r
 month.name # r 內建
-month.DATA = c(31,28,31,30,31,30,31,31,30,31,30,31)
-names(month.DATA) = month.name
+month.DATA <- c(31,28,31,30,31,30,31,31,30,31,30,31)
+names(month.DATA) <- month.name
 month.DATA
 # find day>30  
 names(month.DATA[month.DATA>30])
@@ -402,7 +402,7 @@ names(month.DATA[month.DATA>30])
 ```r
 islands
 ## rank
-new.islands.data = sort(islands,decreasing = TRUE)
+new.islands.data <- sort(islands,decreasing <- TRUE)
 new.islands.data
 ```
 
