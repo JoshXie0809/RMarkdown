@@ -1,0 +1,6 @@
+---
+title: "learning_R_4"
+author: "謝錚奇＿D54079012"
+date: "2020/4/2"
+output: html_document
+---
