@@ -438,10 +438,36 @@ rbind(r1,r2)</code></pre>
 #
 basket.NBA2016.Jordon = c(12,8,9,15,7,12)
 basket.NBA2016.Lin = c(7,8,6,11,9,12)
-rbind(basket.NBA2016.Jordon, basket.NBA2016.Jordon)</code></pre>
+NBA&lt;- rbind(basket.NBA2016.Jordon, basket.NBA2016.Lin)
+NBA</code></pre>
 <pre><code>##                       [,1] [,2] [,3] [,4] [,5] [,6]
 ## basket.NBA2016.Jordon   12    8    9   15    7   12
-## basket.NBA2016.Jordon   12    8    9   15    7   12</code></pre>
+## basket.NBA2016.Lin       7    8    6   11    9   12</code></pre>
+</div>
+<div id="get-sth-matrixrcol" class="section level2">
+<h2>get sth: Matrix[r,col]</h2>
+<pre class="r"><code>NBA[1,1] # from NBA get row:1,col:1</code></pre>
+<pre><code>## basket.NBA2016.Jordon 
+##                    12</code></pre>
+<pre class="r"><code>NBA[1,c(1,2,3)]# from NBA get row:1,col:1 and row:1,col:2 nd row:1,col:2 nd row:1,col:3</code></pre>
+<pre><code>## [1] 12  8  9</code></pre>
+<pre class="r"><code>NBA[1, ]# get first row</code></pre>
+<pre><code>## [1] 12  8  9 15  7 12</code></pre>
+<pre class="r"><code>NBA</code></pre>
+<pre><code>##                       [,1] [,2] [,3] [,4] [,5] [,6]
+## basket.NBA2016.Jordon   12    8    9   15    7   12
+## basket.NBA2016.Lin       7    8    6   11    9   12</code></pre>
+<pre class="r"><code>NBA[,-6] # deletw 6th col</code></pre>
+<pre><code>##                       [,1] [,2] [,3] [,4] [,5]
+## basket.NBA2016.Jordon   12    8    9   15    7
+## basket.NBA2016.Lin       7    8    6   11    9</code></pre>
+<pre class="r"><code># change value
+NBA1 = NBA
+NBA1[,6] = c(0,0)
+NBA1</code></pre>
+<pre><code>##                       [,1] [,2] [,3] [,4] [,5] [,6]
+## basket.NBA2016.Jordon   12    8    9   15    7    0
+## basket.NBA2016.Lin       7    8    6   11    9    0</code></pre>
 </div>
 </div>
 

@@ -57,7 +57,26 @@ rbind(r1,r2)
 #
 basket.NBA2016.Jordon = c(12,8,9,15,7,12)
 basket.NBA2016.Lin = c(7,8,6,11,9,12)
-rbind(basket.NBA2016.Jordon, basket.NBA2016.Jordon)
+NBA<- rbind(basket.NBA2016.Jordon, basket.NBA2016.Lin)
+NBA
+```
+
+## get sth: Matrix[r,col]
+```{r}
+NBA[1,1] # from NBA get row:1,col:1
+
+NBA[1,c(1,2,3)]# from NBA get row:1,col:1 and row:1,col:2 nd row:1,col:2 nd row:1,col:3
+
+NBA[1, ]# get first row
+
+
+NBA
+NBA[,-6] # deletw 6th col
+
+# change value
+NBA1 = NBA
+NBA1[,6] = c(0,0)
+NBA1
 ```
 
 
