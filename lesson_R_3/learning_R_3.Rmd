@@ -5,3 +5,14 @@ date: "2020/4/2"
 output: html_document
 ---
 
+# Factor
+
+## factor( ) ,  as.factor( )
+```{r}
+#factor 最重要的參數
+# x vector : which is used to transfer to factor
+# levels: 可能值
+x<-c("Yes","No","No","No","Yes")
+Yes.Or.No<-factor(x)
+Yes.Or.No
+```
