@@ -542,12 +542,27 @@ m2.matrix </code></pre>
 ## [1,]    4    7   10   13
 ## [2,]    5    8   11   14
 ## [3,]    6    9   12   15</code></pre>
-<pre class="r"><code>m3.matrix = m1.matrix -1 # each item -1
+<pre class="r"><code>m3.matrix = m1.matrix -1 # each item2 -1
 m3.matrix</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
 ## [1,]    0    3    6    9
 ## [2,]    1    4    7   10
 ## [3,]    2    5    8   11</code></pre>
+</div>
+<div id="row-col-operations" class="section level2">
+<h2>row col operations</h2>
+<pre class="r"><code>NBA</code></pre>
+<pre><code>##        1st snd 3rd 4th 5th 6th
+## Jordon  12   8   9  15   7  12
+## Lin      7   8   6  11   9  12</code></pre>
+<pre class="r"><code>#
+rowSums(NBA)</code></pre>
+<pre><code>## Jordon    Lin 
+##     63     53</code></pre>
+<pre class="r"><code>#
+rowMeans(NBA)</code></pre>
+<pre><code>##    Jordon       Lin 
+## 10.500000  8.833333</code></pre>
 </div>
 </div>
 
