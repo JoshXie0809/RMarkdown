@@ -4,3 +4,13 @@ author: "謝錚奇＿D54079012"
 date: "2020/4/3"
 output: html_document
 ---
+
+# Function
+
+![func_1](./fun_fig/percentage_func.png)
+
+```{r}
+source('./func/percentage.R')
+percentage(123.34212)
+```
+
