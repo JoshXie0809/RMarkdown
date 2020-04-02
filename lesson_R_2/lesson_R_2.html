@@ -469,6 +469,34 @@ NBA1</code></pre>
 ## basket.NBA2016.Jordon   12    8    9   15    7    0
 ## basket.NBA2016.Lin       7    8    6   11    9    0</code></pre>
 </div>
+<div id="rows-and-cols-names" class="section level2">
+<h2>rows’ and cols’ names</h2>
+<pre class="r"><code>simple.matrix = matrix(1:12, nrow=3)
+simple.matrix # no names</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12</code></pre>
+<pre class="r"><code>#
+#
+rownames(simple.matrix)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>#
+colnames(simple.matrix)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>#
+#
+NBA</code></pre>
+<pre><code>##                       [,1] [,2] [,3] [,4] [,5] [,6]
+## basket.NBA2016.Jordon   12    8    9   15    7   12
+## basket.NBA2016.Lin       7    8    6   11    9   12</code></pre>
+<pre class="r"><code>#
+rownames(NBA)</code></pre>
+<pre><code>## [1] &quot;basket.NBA2016.Jordon&quot; &quot;basket.NBA2016.Lin&quot;</code></pre>
+<pre class="r"><code>#
+colnames(NBA)</code></pre>
+<pre><code>## NULL</code></pre>
+</div>
 </div>
 
 

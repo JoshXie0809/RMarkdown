@@ -79,4 +79,25 @@ NBA1[,6] = c(0,0)
 NBA1
 ```
 
+## rows' and cols' names
+```{r}
+simple.matrix = matrix(1:12, nrow=3)
+simple.matrix # no names
+#
+#
+rownames(simple.matrix)
+```
+
+
+```{r}
+#
+colnames(simple.matrix)
+#
+#
+NBA
+#
+rownames(NBA)
+#
+colnames(NBA)
+```
 
