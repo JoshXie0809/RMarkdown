@@ -100,3 +100,79 @@ rownames(NBA)
 #
 colnames(NBA)
 ```
+
+## change rows' names
+```{r}
+rownames(NBA) <- c("Jordon","Lin")
+colnames(NBA) <- c('1st',"snd",'3rd','4th','5th','6th')
+NBA
+
+# clear cols' names
+colnames(NBA) <- NULL
+NBA
+
+# dimnames()
+colnames(NBA) <- c('1st',"snd",'3rd','4th','5th','6th')
+dimnames(NBA)
+
+# find item
+NBA[2,]
+# or
+NBA["Lin",]
+```
+## matrix operation
+```{r}
+m1.matrix <- matrix(1:12, nrow = 3)
+m1.matrix
+
+m2.matrix = m1.matrix +3 # each item +3
+m2.matrix 
+
+m3.matrix = m1.matrix -1 # each item2 -1
+m3.matrix
+
+```
+
+## row col operations
+```{r}
+NBA
+#
+rowSums(NBA)
+#
+rowMeans(NBA)
+```
+
+## Transfer
+```{r}
+NBA
+t(NBA)
+```
+## %*%
+```{r}
+m1.matrix
+
+m1.matrix * 1:12 # 對應
+
+m1.matrix %*% 1:4
+
+# diag() -> diagonal
+diag(m1.matrix)
+diag(1, 3,3) #建立Identity Matrix
+#solve() 反矩陣
+#det() 行列式
+```
+
+## 3維或高維  matrix
+```{r}
+f.3m <- array(1:24, dim = c(3,4,2))
+f.3m
+
+s.3m <- 1:24 
+dim(s.3m) <- c(3,4,2)
+s.3m
+
+#identical() is identical?
+identical(f.3m, s.3m)
+
+```
+
