@@ -6,3 +6,73 @@ output: html_document
 ---
 
 # List
+```{r}
+Jordon<-c(11,12,14,15,17,122)
+Lin<-c(3,6,1,4,6,7)
+NBA.team<-rbind(Jordon,Lin)
+colnames(NBA.team)<-c('1st','2nd','3rd','4th','5th','6th')
+
+NBA.Cal<-list("California",'2016-2017',NBA.team)
+NBA.Cal
+names(NBA.Cal)<-c("Team","Season","Score.Info")
+NBA.Cal
+# what we do on list can also for data.frame
+length(NBA.Cal)
+NBA.Cal$Team
+NBA.Cal$Season
+NBA.Cal$Score.Info
+```
+
+
+```{r}
+# change items value
+NBA.new<-NBA.Cal
+NBA.new[[2]]<-"2017-2018"
+NBA.new
+
+# or
+NBA.new<-NBA.Cal
+NBA.new[["Season"]]<-"2018-2019"
+NBA.new
+
+# or
+NBA.new<-NBA.Cal
+NBA.new$Season<-"2019-2020"
+NBA.new
+
+# or
+NBA.new<-NBA.Cal
+NBA.new[2]<-"2020-2021"
+NBA.new
+```
+
+```{r}
+# change several items
+NBA.new<-NBA.Cal
+NBA.new[c(1,2)]<-c("Texas","2022-2023")
+NBA.new
+```
+
+```{r}
+# add item
+NBA.new<-NBA.Cal
+NBA.new$PlayerName <-c("Jordon","Lin")
+NBA.new
+#add several items
+NBA.new[c("PlayerAge","Salary(W)")]<-list(c(33,25), c(1000, 250))
+NBA.new
+
+# delete
+NBA.new[6]<-NULL
+NBA.new
+```
+
+```{r}
+#bind list
+NBA.new.info <- list(Height=c(219,190),
+                     Gender=c("M","M"))
+NBA.new.info
+NBA.new
+c(NBA.new, NBA.new.info)
+```
+

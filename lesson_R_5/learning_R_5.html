@@ -371,6 +371,223 @@ summary {
 
 <div id="list" class="section level1">
 <h1>List</h1>
+<pre class="r"><code>Jordon&lt;-c(11,12,14,15,17,122)
+Lin&lt;-c(3,6,1,4,6,7)
+NBA.team&lt;-rbind(Jordon,Lin)
+colnames(NBA.team)&lt;-c('1st','2nd','3rd','4th','5th','6th')
+
+NBA.Cal&lt;-list(&quot;California&quot;,'2016-2017',NBA.team)
+NBA.Cal</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;California&quot;
+## 
+## [[2]]
+## [1] &quot;2016-2017&quot;
+## 
+## [[3]]
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code>names(NBA.Cal)&lt;-c(&quot;Team&quot;,&quot;Season&quot;,&quot;Score.Info&quot;)
+NBA.Cal</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2016-2017&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># what we do on list can also for data.frame
+length(NBA.Cal)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>NBA.Cal$Team</code></pre>
+<pre><code>## [1] &quot;California&quot;</code></pre>
+<pre class="r"><code>NBA.Cal$Season</code></pre>
+<pre><code>## [1] &quot;2016-2017&quot;</code></pre>
+<pre class="r"><code>NBA.Cal$Score.Info</code></pre>
+<pre><code>##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># change items value
+NBA.new&lt;-NBA.Cal
+NBA.new[[2]]&lt;-&quot;2017-2018&quot;
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2017-2018&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># or
+NBA.new&lt;-NBA.Cal
+NBA.new[[&quot;Season&quot;]]&lt;-&quot;2018-2019&quot;
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2018-2019&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># or
+NBA.new&lt;-NBA.Cal
+NBA.new$Season&lt;-&quot;2019-2020&quot;
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2019-2020&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># or
+NBA.new&lt;-NBA.Cal
+NBA.new[2]&lt;-&quot;2020-2021&quot;
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2020-2021&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># change several items
+NBA.new&lt;-NBA.Cal
+NBA.new[c(1,2)]&lt;-c(&quot;Texas&quot;,&quot;2022-2023&quot;)
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;Texas&quot;
+## 
+## $Season
+## [1] &quot;2022-2023&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7</code></pre>
+<pre class="r"><code># add item
+NBA.new&lt;-NBA.Cal
+NBA.new$PlayerName &lt;-c(&quot;Jordon&quot;,&quot;Lin&quot;)
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2016-2017&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7
+## 
+## $PlayerName
+## [1] &quot;Jordon&quot; &quot;Lin&quot;</code></pre>
+<pre class="r"><code>#add several items
+NBA.new[c(&quot;PlayerAge&quot;,&quot;Salary(W)&quot;)]&lt;-list(c(33,25), c(1000, 250))
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2016-2017&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7
+## 
+## $PlayerName
+## [1] &quot;Jordon&quot; &quot;Lin&quot;   
+## 
+## $PlayerAge
+## [1] 33 25
+## 
+## $`Salary(W)`
+## [1] 1000  250</code></pre>
+<pre class="r"><code># delete
+NBA.new[6]&lt;-NULL
+NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2016-2017&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7
+## 
+## $PlayerName
+## [1] &quot;Jordon&quot; &quot;Lin&quot;   
+## 
+## $PlayerAge
+## [1] 33 25</code></pre>
+<pre class="r"><code>#bind list
+NBA.new.info &lt;- list(Height=c(219,190),
+                     Gender=c(&quot;M&quot;,&quot;M&quot;))
+NBA.new.info</code></pre>
+<pre><code>## $Height
+## [1] 219 190
+## 
+## $Gender
+## [1] &quot;M&quot; &quot;M&quot;</code></pre>
+<pre class="r"><code>NBA.new</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2016-2017&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7
+## 
+## $PlayerName
+## [1] &quot;Jordon&quot; &quot;Lin&quot;   
+## 
+## $PlayerAge
+## [1] 33 25</code></pre>
+<pre class="r"><code>c(NBA.new, NBA.new.info)</code></pre>
+<pre><code>## $Team
+## [1] &quot;California&quot;
+## 
+## $Season
+## [1] &quot;2016-2017&quot;
+## 
+## $Score.Info
+##        1st 2nd 3rd 4th 5th 6th
+## Jordon  11  12  14  15  17 122
+## Lin      3   6   1   4   6   7
+## 
+## $PlayerName
+## [1] &quot;Jordon&quot; &quot;Lin&quot;   
+## 
+## $PlayerAge
+## [1] 33 25
+## 
+## $Height
+## [1] 219 190
+## 
+## $Gender
+## [1] &quot;M&quot; &quot;M&quot;</code></pre>
 </div>
 
 
