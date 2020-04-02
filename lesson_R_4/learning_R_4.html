@@ -369,7 +369,60 @@ summary {
 </div>
 
 
-<p>aaa</p>
+<div id="data-frame" class="section level1">
+<h1>Data Frame</h1>
+<pre class="r"><code>#first dataframe
+mit.Name&lt;-c(&quot;Kevin&quot;,&quot;Peter&quot;,&quot;Frank&quot;,&quot;Paggie&quot;)
+mit.Gender&lt;-c(&quot;M&quot;,&quot;M&quot;,&quot;M&quot;,&quot;F&quot;)
+mit.Height&lt;-c(170,165,174,151)
+
+mit.info&lt;-data.frame(mit.Name, mit.Gender, mit.Height)
+mit.info</code></pre>
+<pre><code>##   mit.Name mit.Gender mit.Height
+## 1    Kevin          M        170
+## 2    Peter          M        165
+## 3    Frank          M        174
+## 4   Paggie          F        151</code></pre>
+<pre class="r"><code>#name, col, row, names
+names(mit.info)</code></pre>
+<pre><code>## [1] &quot;mit.Name&quot;   &quot;mit.Gender&quot; &quot;mit.Height&quot;</code></pre>
+<pre class="r"><code>colnames(mit.info)</code></pre>
+<pre><code>## [1] &quot;mit.Name&quot;   &quot;mit.Gender&quot; &quot;mit.Height&quot;</code></pre>
+<pre class="r"><code>rownames(mit.info)</code></pre>
+<pre><code>## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot;</code></pre>
+<pre class="r"><code>colnames(mit.info)&lt;-c(&quot;Name&quot;, &quot;Gender&quot;, &quot;Height&quot;)
+mit.info</code></pre>
+<pre><code>##     Name Gender Height
+## 1  Kevin      M    170
+## 2  Peter      M    165
+## 3  Frank      M    174
+## 4 Paggie      F    151</code></pre>
+<pre class="r"><code># r order
+str(mit.info)</code></pre>
+<pre><code>## 'data.frame':    4 obs. of  3 variables:
+##  $ Name  : Factor w/ 4 levels &quot;Frank&quot;,&quot;Kevin&quot;,..: 2 4 1 3
+##  $ Gender: Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 2 2 2 1
+##  $ Height: num  170 165 174 151</code></pre>
+<pre class="r"><code># get item
+mit.newinfo&lt;-data.frame(mit.Name, mit.Gender, mit.Height, stringsAsFactors = F)
+names(mit.newinfo)&lt;-c(&quot;Name&quot;, &quot;Gender&quot;, &quot;Height&quot;)
+mit.newinfo[,&quot;Name&quot;]</code></pre>
+<pre><code>## [1] &quot;Kevin&quot;  &quot;Peter&quot;  &quot;Frank&quot;  &quot;Paggie&quot;</code></pre>
+<pre class="r"><code>mit.newinfo[3,]</code></pre>
+<pre><code>##    Name Gender Height
+## 3 Frank      M    174</code></pre>
+</div>
+<div id="特殊符號" class="section level1">
+<h1>$ 特殊符號</h1>
+<pre class="r"><code># $ 特殊符號
+str(mit.newinfo)</code></pre>
+<pre><code>## 'data.frame':    4 obs. of  3 variables:
+##  $ Name  : chr  &quot;Kevin&quot; &quot;Peter&quot; &quot;Frank&quot; &quot;Paggie&quot;
+##  $ Gender: chr  &quot;M&quot; &quot;M&quot; &quot;M&quot; &quot;F&quot;
+##  $ Height: num  170 165 174 151</code></pre>
+<pre class="r"><code>mit.newinfo$Name#快速讀取</code></pre>
+<pre><code>## [1] &quot;Kevin&quot;  &quot;Peter&quot;  &quot;Frank&quot;  &quot;Paggie&quot;</code></pre>
+</div>
 
 
 
