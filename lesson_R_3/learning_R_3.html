@@ -376,11 +376,59 @@ summary {
 <pre class="r"><code>#factor 最重要的參數
 # x vector : which is used to transfer to factor
 # levels: 可能值
-x&lt;-c(&quot;Yes&quot;,&quot;No&quot;,&quot;No&quot;,&quot;No&quot;,&quot;Yes&quot;)
-Yes.Or.No&lt;-factor(x)
-Yes.Or.No</code></pre>
+
+Yes.Or.No&lt;-c(&quot;Yes&quot;,&quot;No&quot;,&quot;No&quot;,&quot;No&quot;,&quot;Yes&quot;)
+first.factor&lt;-factor(Yes.Or.No)
+first.factor</code></pre>
 <pre><code>## [1] Yes No  No  No  Yes
 ## Levels: No Yes</code></pre>
+<pre class="r"><code>second.factor &lt;- factor(Yes.Or.No, levels = c(&quot;Yes&quot;,&quot;No&quot;))
+second.factor</code></pre>
+<pre><code>## [1] Yes No  No  No  Yes
+## Levels: Yes No</code></pre>
+<pre class="r"><code># 指定缺失的levels值
+directions&lt;-c(&quot;North&quot;,&quot;East&quot;,&quot;West&quot;,&quot;North&quot;,&quot;East&quot;,&quot;West&quot;,&quot;North&quot;, 
+              &quot;East&quot;,&quot;West&quot;)
+
+# South?
+direction.factor&lt;-factor(directions)
+direction.factor</code></pre>
+<pre><code>## [1] North East  West  North East  West  North East  West 
+## Levels: East North West</code></pre>
+<pre class="r"><code>new.direction.factor&lt;-factor(directions, levels=c(&quot;North&quot;,&quot;East&quot;,&quot;West&quot;, &quot;South&quot;))
+new.direction.factor</code></pre>
+<pre><code>## [1] North East  West  North East  West  North East  West 
+## Levels: North East West South</code></pre>
+<pre class="r"><code>label.direction.factor&lt;-factor(directions, levels=c(&quot;North&quot;,&quot;East&quot;,&quot;West&quot;, &quot;South&quot;), labels = 
+                               c('N', 'E', 'W', &quot;S&quot;))
+label.direction.factor</code></pre>
+<pre><code>## [1] N E W N E W N E W
+## Levels: N E W S</code></pre>
+<pre class="r"><code># change to numeric 
+# N-&gt;1
+# E-&gt;2
+# W-&gt;3
+# S-&gt;4
+as.numeric(label.direction.factor)</code></pre>
+<pre><code>## [1] 1 2 3 1 2 3 1 2 3</code></pre>
+<pre class="r"><code>str(label.direction.factor)</code></pre>
+<pre><code>##  Factor w/ 4 levels &quot;N&quot;,&quot;E&quot;,&quot;W&quot;,&quot;S&quot;: 1 2 3 1 2 3 1 2 3</code></pre>
+</div>
+<div id="ordered-factor" class="section level2">
+<h2>Ordered Factor</h2>
+<pre class="r"><code>str1&lt;-c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;D&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;A&quot;)
+str1.order&lt;-ordered(str1)
+#字母排序
+str1.order</code></pre>
+<pre><code>## [1] A B C D D B C D A
+## Levels: A &lt; B &lt; C &lt; D</code></pre>
+<pre class="r"><code>str2.order&lt;-factor(str1,levels = c('D','C',&quot;B&quot;,&quot;A&quot;),ordered = T)
+str2.order</code></pre>
+<pre><code>## [1] A B C D D B C D A
+## Levels: D &lt; C &lt; B &lt; A</code></pre>
+<pre class="r"><code>#成績排序
+which(str2.order &gt; 'B')#成績B以上</code></pre>
+<pre><code>## [1] 1 9</code></pre>
 </div>
 </div>
 
