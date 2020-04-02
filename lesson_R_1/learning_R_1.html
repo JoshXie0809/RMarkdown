@@ -738,6 +738,58 @@ month.DATA</code></pre>
 <pre class="r"><code># find day&gt;30  
 names(month.DATA[month.DATA&gt;30])</code></pre>
 <pre><code>## [1] &quot;January&quot;  &quot;March&quot;    &quot;May&quot;      &quot;July&quot;     &quot;August&quot;   &quot;October&quot;  &quot;December&quot;</code></pre>
+<pre class="r"><code>islands</code></pre>
+<pre><code>##           Africa       Antarctica             Asia        Australia 
+##            11506             5500            16988             2968 
+##     Axel Heiberg           Baffin            Banks           Borneo 
+##               16              184               23              280 
+##          Britain          Celebes            Celon             Cuba 
+##               84               73               25               43 
+##            Devon        Ellesmere           Europe        Greenland 
+##               21               82             3745              840 
+##           Hainan       Hispaniola         Hokkaido           Honshu 
+##               13               30               30               89 
+##          Iceland          Ireland             Java           Kyushu 
+##               40               33               49               14 
+##            Luzon       Madagascar         Melville         Mindanao 
+##               42              227               16               36 
+##         Moluccas      New Britain       New Guinea  New Zealand (N) 
+##               29               15              306               44 
+##  New Zealand (S)     Newfoundland    North America    Novaya Zemlya 
+##               58               43             9390               32 
+##  Prince of Wales         Sakhalin    South America      Southampton 
+##               13               29             6795               16 
+##      Spitsbergen          Sumatra           Taiwan         Tasmania 
+##               15              183               14               26 
+## Tierra del Fuego            Timor        Vancouver         Victoria 
+##               19               13               12               82</code></pre>
+<pre class="r"><code>## rank
+new.islands.data = sort(islands,decreasing = TRUE)
+new.islands.data</code></pre>
+<pre><code>##             Asia           Africa    North America    South America 
+##            16988            11506             9390             6795 
+##       Antarctica           Europe        Australia        Greenland 
+##             5500             3745             2968              840 
+##       New Guinea           Borneo       Madagascar           Baffin 
+##              306              280              227              184 
+##          Sumatra           Honshu          Britain        Ellesmere 
+##              183               89               84               82 
+##         Victoria          Celebes  New Zealand (S)             Java 
+##               82               73               58               49 
+##  New Zealand (N)             Cuba     Newfoundland            Luzon 
+##               44               43               43               42 
+##          Iceland         Mindanao          Ireland    Novaya Zemlya 
+##               40               36               33               32 
+##       Hispaniola         Hokkaido         Moluccas         Sakhalin 
+##               30               30               29               29 
+##         Tasmania            Celon            Banks            Devon 
+##               26               25               23               21 
+## Tierra del Fuego     Axel Heiberg         Melville      Southampton 
+##               19               16               16               16 
+##      New Britain      Spitsbergen           Kyushu           Taiwan 
+##               15               15               14               14 
+##           Hainan  Prince of Wales            Timor        Vancouver 
+##               13               13               13               12</code></pre>
 </div>
 </div>
 

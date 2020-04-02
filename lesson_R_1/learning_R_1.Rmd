@@ -401,6 +401,12 @@ month.DATA
 names(month.DATA[month.DATA>30])
 ```
 
+```{r}
+islands
+## rank
+new.islands.data = sort(islands,decreasing = TRUE)
+new.islands.data
+```
 
 
 
