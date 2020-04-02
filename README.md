@@ -1,11 +1,9 @@
 - [ ] 完成
 - [x] 未完成
 
----
 
-University : NCKU
-Name : JoshXie
-StudentID : D54079012
-HW : R_learning
+University |  Name   | StudentID |   HW 
+:----------|:--------|:----------|:------
+ NCKU      | JoshXie | D54079012 | R_learning
 
----
+
