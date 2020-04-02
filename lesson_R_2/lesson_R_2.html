@@ -371,8 +371,73 @@ summary {
 
 <div id="matrix" class="section level1">
 <h1>Matrix</h1>
-<div id="create-matrix" class="section level2">
-<h2>create Matrix</h2>
+<div id="create-matrix-by-matrix" class="section level2">
+<h2>create Matrix by matrix( )</h2>
+<pre class="r"><code># Matrix(data, nrow = ?, ncol = ?, byrows = logical, dimnames = NULL)
+# data 
+# nrow : how many row
+# ncol : how many colums
+# byrow : logical put data in row 
+
+# full row first
+e.g.1 = matrix(1:12,nrow = 4, byrow = T)
+e.g.1</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+## [4,]   10   11   12</code></pre>
+<pre class="r"><code># full column first
+e.g.2 = matrix(1:12,nrow = 4, byrow = F)
+e.g.2</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    5    9
+## [2,]    2    6   10
+## [3,]    3    7   11
+## [4,]    4    8   12</code></pre>
+</div>
+<div id="matrix-的屬性" class="section level2">
+<h2>matrix 的屬性</h2>
+<pre class="r"><code># str()
+str(e.g.1)</code></pre>
+<pre><code>##  int [1:4, 1:3] 1 4 7 10 2 5 8 11 3 6 ...</code></pre>
+<pre class="r"><code>str(e.g.2)</code></pre>
+<pre><code>##  int [1:4, 1:3] 1 2 3 4 5 6 7 8 9 10 ...</code></pre>
+<pre class="r"><code># nrow : how many row?
+nrow(e.g.1)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>nrow(e.g.2)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code># ncol : how many col?
+ncol(e.g.1)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>ncol(e.g.2)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>#is.matrix()
+is.matrix(e.g.1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.matrix(e.g.2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>#is.array()
+is.array(e.g.1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>is.array(e.g.2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="create-matrix-by-vector" class="section level2">
+<h2>create Matrix by vector</h2>
+<pre class="r"><code># rbind : treat c()s as rows and bind them
+r1 = c(1:10)
+r2 = c(1,2)
+# see rows' names!! 
+rbind(r1,r2)</code></pre>
+<pre><code>##    [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## r1    1    2    3    4    5    6    7    8    9    10
+## r2    1    2    1    2    1    2    1    2    1     2</code></pre>
+<pre class="r"><code>#
+#
+basket.NBA2016.Jordon = c(12,8,9,15,7,12)
+basket.NBA2016.Lin = c(7,8,6,11,9,12)</code></pre>
 </div>
 </div>
 
