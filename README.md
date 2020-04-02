@@ -1,10 +1,8 @@
-# RMarkdown
-r markdown
+---
 
-this is the HW of NCKU class, making us to learn  
+University:NCKU
+Name: JoshXie
+StudentID: D54079012
+HW: R_learning
 
-# `Github and Rstudio`
-
-
-
-
+---
