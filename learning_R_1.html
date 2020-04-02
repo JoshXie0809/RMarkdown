@@ -580,7 +580,7 @@ x2</code></pre>
 <p>is.integer(): 是否整數 is.numeric(): 是否數字 is.double(): 是否雙倍精確實數 is.character(): 是否字串</p>
 <pre class="r"><code>x1&lt;-c(1:5)
 x2&lt;-c(1.5, 2)
-x3=c(&quot;hello&quot;)
+x3=c('Hello',&quot;r&quot;,&quot;world&quot;)
 is.integer(x1)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>is.integer(x2)</code></pre>
@@ -605,6 +605,27 @@ is.integer(x1)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>is.character(x3)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="探索物件結構" class="section level2">
+<h2>探索物件結構</h2>
+<pre class="r"><code>baskest.NBA2016.Lin</code></pre>
+<pre><code>## [1]  7  8  6 11  9 12</code></pre>
+<pre class="r"><code>str(baskest.NBA2016.Lin)</code></pre>
+<pre><code>##  num [1:6] 7 8 6 11 9 12</code></pre>
+<pre class="r"><code>str(x1)</code></pre>
+<pre><code>##  int [1:5] 1 2 3 4 5</code></pre>
+<pre class="r"><code>str(c(2.5,1.5))</code></pre>
+<pre><code>##  num [1:2] 2.5 1.5</code></pre>
+<pre class="r"><code>str(x3)</code></pre>
+<pre><code>##  chr [1:3] &quot;Hello&quot; &quot;r&quot; &quot;world&quot;</code></pre>
+<pre class="r"><code>class(baskest.NBA2016.Lin)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(x1)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>class(c(2.5,1.5))</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(x3)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
 </div>
 

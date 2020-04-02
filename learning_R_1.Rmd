@@ -266,7 +266,7 @@ is.character(): 是否字串
 ```{r}
 x1<-c(1:5)
 x2<-c(1.5, 2)
-x3=c("hello")
+x3=c('Hello',"r","world")
 is.integer(x1)
 is.integer(x2)
 is.integer(x3)
@@ -285,7 +285,22 @@ is.character(x3)
 ```
 
 
+## 探索物件結構
+```{r}
+baskest.NBA2016.Lin
 
+str(baskest.NBA2016.Lin)
+str(x1)
+str(c(2.5,1.5))
+str(x3)
+```
+
+```{r}
+class(baskest.NBA2016.Lin)
+class(x1)
+class(c(2.5,1.5))
+class(x3)
+```
 
 
 
