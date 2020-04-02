@@ -302,14 +302,14 @@ class(c(2.5,1.5))
 class(x3)
 ```
 
-物件元素的存取
+## 物件元素的存取
 ```{r}
 number.List <- 1:25
 number.List
 
 ```
 
-下標[n]
+## 下標[n]
 ```{r}
 number.List[1] #第一個東西
 number.List[13] #第13個東西
@@ -318,11 +318,33 @@ number.List[c(1,12,17)] #第1,12,17個東西 # 但索引只能為一個
 
 ```
 
+## 負索引的使用 ： 扣除
+
+```{r}
+number.List[-1] #扣除第一個東西
+number.List[-13] #扣除第13個東西
+number.List[-c(1:12)]
+```
 
 
+## 修改 向量
 
+```{r}
+baskest.NBA2016.Jordon 
+##備份
+copy.Jordon<-baskest.NBA2016.Jordon
 
+## 修改
+copy.Jordon[3]<-9090909
+copy.Jordon
 
+```
+
+## 邏輯 向量： TRUE & FALSE
+```{r}
+baskest.NBA2016.Jordon
+
+```
 
 
 
