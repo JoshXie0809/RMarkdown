@@ -427,8 +427,18 @@ str2.order</code></pre>
 <pre><code>## [1] A B C D D B C D A
 ## Levels: D &lt; C &lt; B &lt; A</code></pre>
 <pre class="r"><code>#成績排序
-which(str2.order &gt; 'B')#成績B以上</code></pre>
-<pre><code>## [1] 1 9</code></pre>
+which(str2.order &gt;= 'B')#成績B or 以上</code></pre>
+<pre><code>## [1] 1 2 6 9</code></pre>
+</div>
+<div id="table" class="section level2">
+<h2>table( )</h2>
+<pre class="r"><code>first.factor</code></pre>
+<pre><code>## [1] Yes No  No  No  Yes
+## Levels: No Yes</code></pre>
+<pre class="r"><code>table(first.factor)</code></pre>
+<pre><code>## first.factor
+##  No Yes 
+##   3   2</code></pre>
 </div>
 </div>
 

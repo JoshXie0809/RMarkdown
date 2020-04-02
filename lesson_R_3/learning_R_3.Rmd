@@ -53,6 +53,12 @@ str1.order
 str2.order<-factor(str1,levels = c('D','C',"B","A"),ordered = T)
 str2.order
 #成績排序
-which(str2.order > 'B')#成績B以上
+which(str2.order >= 'B')#成績B or 以上
 ```
+## table( )
+```{r}
+first.factor
+table(first.factor)
+```
+
 
