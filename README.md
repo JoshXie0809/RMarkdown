@@ -1,5 +1,6 @@
-- [] 完成
+- [ ] 完成
 - [x] 未完成
+
 ---
 University: NCKU
 Name: JoshXie
