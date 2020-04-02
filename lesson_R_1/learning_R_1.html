@@ -668,6 +668,22 @@ copy.Jordon</code></pre>
 <h2>邏輯 向量： TRUE &amp; FALSE</h2>
 <pre class="r"><code>baskest.NBA2016.Jordon</code></pre>
 <pre><code>## [1] 10  5  9 15  7 11</code></pre>
+<pre class="r"><code>which(baskest.NBA2016.Jordon &gt; 10) </code></pre>
+<pre><code>## [1] 4 6</code></pre>
+<pre class="r"><code># 告訴你哪幾個索引&gt;10
+
+baskest.NBA2016.Jordon[which(baskest.NBA2016.Jordon &gt; 10) ] </code></pre>
+<pre><code>## [1] 15 11</code></pre>
+<pre class="r"><code># Jordon[4] &amp; Jordon[6]</code></pre>
+</div>
+<div id="inf--inf-na-處理" class="section level2">
+<h2>Inf -Inf NA 處理</h2>
+<pre class="r"><code>x&lt;-c(1,20,332,NA,Inf)
+x[x&gt;10]</code></pre>
+<pre><code>## [1]  20 332  NA Inf</code></pre>
+<pre class="r"><code>x[x&lt;10]</code></pre>
+<pre><code>## [1]  1 NA</code></pre>
+<pre class="r"><code># NA ??!  &gt;10? or &lt;10?</code></pre>
 </div>
 </div>
 

@@ -343,7 +343,19 @@ copy.Jordon
 ## 邏輯 向量： TRUE & FALSE
 ```{r}
 baskest.NBA2016.Jordon
+which(baskest.NBA2016.Jordon > 10) 
+# 告訴你哪幾個索引>10
 
+baskest.NBA2016.Jordon[which(baskest.NBA2016.Jordon > 10) ] 
+# Jordon[4] & Jordon[6]
+```
+ 
+## Inf -Inf NA 處理
+```{r}
+x<-c(1,20,332,NA,Inf)
+x[x>10]
+x[x<10]
+# NA ??!  >10? or <10?
 ```
 
 
