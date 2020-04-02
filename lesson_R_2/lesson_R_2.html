@@ -607,6 +607,43 @@ diag(m1.matrix)</code></pre>
 <pre class="r"><code>#solve() 反矩陣
 #det() 行列式</code></pre>
 </div>
+<div id="維或高維-matrix" class="section level2">
+<h2>3維或高維 matrix</h2>
+<pre class="r"><code>f.3m &lt;- array(1:24, dim = c(3,4,2))
+f.3m</code></pre>
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]   13   16   19   22
+## [2,]   14   17   20   23
+## [3,]   15   18   21   24</code></pre>
+<pre class="r"><code>s.3m &lt;- 1:24 
+dim(s.3m) &lt;- c(3,4,2)
+s.3m</code></pre>
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]   13   16   19   22
+## [2,]   14   17   20   23
+## [3,]   15   18   21   24</code></pre>
+<pre class="r"><code>#identical() is identical?
+identical(f.3m, s.3m)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
 </div>
 
 
