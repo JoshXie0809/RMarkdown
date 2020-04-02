@@ -2,9 +2,7 @@
 title: "learningR_1"
 author: "joshxie"
 date: "2020/3/12"
-output:
-  html_document: default
-  pdf_document: default
+output: html_document
 ---
 # R learning lecture 1
 ## 向量物件 
