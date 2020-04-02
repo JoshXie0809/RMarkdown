@@ -101,3 +101,35 @@ rownames(NBA)
 colnames(NBA)
 ```
 
+## change rows' names
+```{r}
+rownames(NBA) <- c("Jordon","Lin")
+colnames(NBA) <- c('1st',"snd",'3rd','4th','5th','6th')
+NBA
+
+# clear cols' names
+colnames(NBA) <- NULL
+NBA
+
+# dimnames()
+colnames(NBA) <- c('1st',"snd",'3rd','4th','5th','6th')
+dimnames(NBA)
+
+# find item
+NBA[2,]
+# or
+NBA["Lin",]
+
+```
+## matrix operation
+```{r}
+m1.matrix <- matrix(1:12, nrow = 3)
+m1.matrix
+
+m2.matrix = m1.matrix +3 # each item +3
+m2.matrix 
+
+m3.matrix = m1.matrix -1 # each item -1
+m3.matrix
+```
+
