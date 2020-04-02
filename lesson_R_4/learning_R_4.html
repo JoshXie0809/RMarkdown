@@ -423,6 +423,51 @@ str(mit.newinfo)</code></pre>
 <pre class="r"><code>mit.newinfo$Name#快速讀取</code></pre>
 <pre><code>## [1] &quot;Kevin&quot;  &quot;Peter&quot;  &quot;Frank&quot;  &quot;Paggie&quot;</code></pre>
 </div>
+<div id="rbind-add-new-row-data" class="section level1">
+<h1>rbind add new row data</h1>
+<pre class="r"><code>mit.newinfo&lt;-rbind(mit.newinfo,c(&quot;Amy&quot;,&quot;F&quot;,162))
+new.other.mit&lt;-data.frame(Name = c(&quot;Tony&quot;,&quot;Julia&quot;),
+                          Gender = c(&quot;M&quot;,&quot;F&quot;),
+                          Height = c(188,123))
+mit.newinfo</code></pre>
+<pre><code>##     Name Gender Height
+## 1  Kevin      M    170
+## 2  Peter      M    165
+## 3  Frank      M    174
+## 4 Paggie      F    151
+## 5    Amy      F    162</code></pre>
+<pre class="r"><code>new.other.mit</code></pre>
+<pre><code>##    Name Gender Height
+## 1  Tony      M    188
+## 2 Julia      F    123</code></pre>
+<pre class="r"><code>mit.stu = rbind(mit.newinfo,new.other.mit)</code></pre>
+<pre class="r"><code>mit.stu</code></pre>
+<pre><code>##     Name Gender Height
+## 1  Kevin      M    170
+## 2  Peter      M    165
+## 3  Frank      M    174
+## 4 Paggie      F    151
+## 5    Amy      F    162
+## 6   Tony      M    188
+## 7  Julia      F    123</code></pre>
+<pre class="r"><code># cbind()
+mit.stu&lt;-cbind(mit.stu, Weight = c(78,65,80,44,51,89,30))</code></pre>
+<pre class="r"><code>mit.stu</code></pre>
+<pre><code>##     Name Gender Height Weight
+## 1  Kevin      M    170     78
+## 2  Peter      M    165     65
+## 3  Frank      M    174     80
+## 4 Paggie      F    151     44
+## 5    Amy      F    162     51
+## 6   Tony      M    188     89
+## 7  Julia      F    123     30</code></pre>
+<pre class="r"><code>t(mit.stu)</code></pre>
+<pre><code>##        [,1]    [,2]    [,3]    [,4]     [,5]  [,6]   [,7]   
+## Name   &quot;Kevin&quot; &quot;Peter&quot; &quot;Frank&quot; &quot;Paggie&quot; &quot;Amy&quot; &quot;Tony&quot; &quot;Julia&quot;
+## Gender &quot;M&quot;     &quot;M&quot;     &quot;M&quot;     &quot;F&quot;      &quot;F&quot;   &quot;M&quot;    &quot;F&quot;    
+## Height &quot;170&quot;   &quot;165&quot;   &quot;174&quot;   &quot;151&quot;    &quot;162&quot; &quot;188&quot;  &quot;123&quot;  
+## Weight &quot;78&quot;    &quot;65&quot;    &quot;80&quot;    &quot;44&quot;     &quot;51&quot;  &quot;89&quot;   &quot;30&quot;</code></pre>
+</div>
 
 
 
