@@ -8,7 +8,7 @@ output: html_document
 ## 向量物件 
 
 
-```{r}
+```r
 
 x<-1:10
 print(x)
@@ -16,7 +16,7 @@ print(x)
 ```
 
 
-```{r}
+```r
 
 x<-11:13
 print(x)
@@ -24,7 +24,7 @@ print(x)
 ```
 
 
-```{r}
+```r
 
 x<--1:-5
 print(x)
@@ -32,7 +32,7 @@ print(x)
 ```
 也可以是-1
 
-```{r}
+```r
 
 x<- -1.7:-5.3
 print(x)
@@ -41,7 +41,7 @@ print(x)
 
 不足1, 不顯示
 
-```{r}
+```r
 
 x<-1:5
 y<-x+3
@@ -53,7 +53,7 @@ print(y)
 每個都 + 3
 
 
-```{r}
+```r
 
 x<-1:3
 y<-1:6+x
@@ -65,7 +65,7 @@ print(y)
 3 and 6, 6=3*k
 if b=a*K?
 
-```{r}
+```r
 
 x<-1:4
 y<-1:6+x
@@ -75,30 +75,30 @@ print(y)
 error!!!
 
 ## 建立 seq( ) function 
-```{r}
+```r
 seq(1,9)
 ```
 from 1 to 9
 
-```{r}
+```r
 seq(1, 9, by = 2)
 ```
 
 from 1 to 9, by 2
 
-```{r}
+```r
 seq(1, 9, by = pi)
 ```
 
 from 1 to 9, by $\pi$ 
 
-```{r}
+```r
 seq(1, 9, by = 0.5)
 ```
 
 from 1 to 9, by 0.5
 
-```{r}
+```r
 seq(1, 9, length.out = 4)
 ```
 
@@ -106,30 +106,30 @@ from 1 to 9, has four numbers.
 
 
 ##  c( ) function 
-```{r}
+```r
 baskest.NBA2016.Lin<-c(7,8,6,11,9,12)
 print(baskest.NBA2016.Lin)
 ```
 
 建立向量
 
-```{r}
+```r
 sum(baskest.NBA2016.Lin)
 ```
 
 
-```{r}
+```r
 max(baskest.NBA2016.Lin)
 ```
 
 
-```{r}
+```r
 min(baskest.NBA2016.Lin)
 ```
 
 ## prod()
 
-```{r}
+```r
 prod(1:2)
 prod(1:3)
 prod(1:4)
@@ -139,7 +139,7 @@ prod(1:6)
 
 ## cum( )
 
-```{r}
+```r
 baskest.NBA2016.Jordon<-c(10,5,9,15,7,11)
 cumsum(baskest.NBA2016.Jordon)
 cumprod(baskest.NBA2016.Jordon)
@@ -149,7 +149,7 @@ cummin(baskest.NBA2016.Jordon)
 
 ## diff( )
 
-```{r}
+```r
 baskest.NBA2016.Jordon
 diff(baskest.NBA2016.Jordon)
 ```
@@ -159,13 +159,13 @@ diff(baskest.NBA2016.Jordon)
 ## 向量物件排序函數
 
 sort(x,decreasing = <font style="color:red">FALSE</font>) 小排到大
-```{r}
+```r
 baskest.NBA2016.Jordon
 sort(baskest.NBA2016.Jordon)
 ```
 
 ## sort(x,decreasing = <font style="color:red">TRUE</font>) 大排到小
-```{r}
+```r
 baskest.NBA2016.Jordon
 sort(baskest.NBA2016.Jordon, decreasing = TRUE)
 ```
@@ -173,13 +173,13 @@ sort(baskest.NBA2016.Jordon, decreasing = TRUE)
 ## rank() 排名
 從小到大的排名
 
-```{r}
+```r
 baskest.NBA2016.Jordon
 rank(baskest.NBA2016.Jordon)
 ```
 
 ## rev( ) 顛倒func
-```{r}
+```r
 x<-c(7,11,4,9,6)
 x
 rev(x)
@@ -187,7 +187,7 @@ rev(x)
 
 ## length 計算向量物件的個數
 
-```{r}
+```r
 baskest.NBA2016.Jordon
 length(baskest.NBA2016.Jordon)
 ```
@@ -195,14 +195,14 @@ length(baskest.NBA2016.Jordon)
 
 ## sd 標準差 var 變異數
 
-```{r}
+```r
 sd(c(11,15,8))
 var(14:16)
 ```
 
 ## Inf -Inf NA 都是數字
 
-```{r}
+```r
 max(c(43,98,Inf))
 min(c(33,98,Inf))
 sum(c(43,98,Inf))
@@ -214,14 +214,14 @@ sum(c(43,9999999999999999999999,-Inf))
 
 
 ## 如果向量含有NA , result=NA
-```{r}
+```r
 max(c(43,98,Inf,NA))
 sum(c(43,98,Inf,NA))
 ```
 
 ## 若想向量含有NA , 也可以運算 ` na.rm = T` or `na.rm = TRUE`
 
-```{r}
+```r
 max(c(43,98,Inf,NA),na.rm = T)
 sum(c(43,98,1221,NA),na.rm = TRUE)
 ```
@@ -236,7 +236,7 @@ double 小數字
 
 character 字串
 
-```{r}
+```r
 x<-c("Hello R World")
 x
 length(x)
@@ -261,7 +261,7 @@ is.numeric(): 是否數字
 is.double():  是否雙倍精確實數
 is.character(): 是否字串
 
-```{r}
+```r
 x1<-c(1:5)
 x2<-c(1.5, 2)
 x3=c('Hello',"r","world")
@@ -284,7 +284,7 @@ is.character(x3)
 
 
 ## 探索物件結構
-```{r}
+```r
 baskest.NBA2016.Lin
 
 str(baskest.NBA2016.Lin)
@@ -293,7 +293,7 @@ str(c(2.5,1.5))
 str(x3)
 ```
 
-```{r}
+```r
 class(baskest.NBA2016.Lin)
 class(x1)
 class(c(2.5,1.5))
@@ -301,14 +301,14 @@ class(x3)
 ```
 
 ## 物件元素的存取
-```{r}
+```r
 number.List <- 1:25
 number.List
 
 ```
 
 ## 下標[n]
-```{r}
+```r
 number.List[1] #第一個東西
 number.List[13] #第13個東西
 number.List[c(1,12,17)] #第1,12,17個東西 # 但索引只能為一個
@@ -318,7 +318,7 @@ number.List[c(1,12,17)] #第1,12,17個東西 # 但索引只能為一個
 
 ## 負索引的使用 ： 扣除
 
-```{r}
+```r
 number.List[-1] #扣除第一個東西
 number.List[-13] #扣除第13個東西
 number.List[-c(1:12)]
@@ -327,7 +327,7 @@ number.List[-c(1:12)]
 
 ## 修改 向量
 
-```{r}
+```r
 baskest.NBA2016.Jordon 
 ##備份
 copy.Jordon<-baskest.NBA2016.Jordon
@@ -339,7 +339,7 @@ copy.Jordon
 ```
 
 ## 邏輯 向量： TRUE & FALSE
-```{r}
+```r
 baskest.NBA2016.Jordon
 which(baskest.NBA2016.Jordon > 10) 
 # 告訴你哪幾個索引>10
@@ -349,7 +349,7 @@ baskest.NBA2016.Jordon[which(baskest.NBA2016.Jordon > 10) ]
 ```
  
 ## Inf -Inf NA 處理
-```{r}
+```r
 x<-c(1,20,332,NA,Inf)
 x[x>10]
 x[x<10]
@@ -358,13 +358,13 @@ x[x<10]
 
 
 ## any( ) 的運用： 只要一個TRUE = 傳回TRUE
-```{r}
+```r
 x = c(1,11,111,111,11111,999999999999999)
 any(x>999999)
 
 ```
 ## 不同向量長度 的向量 相成：必須是倍數關係
-```{r}
+```r
 basket.ball.Jordon<-c(1,2,3,4,5,6)
 # odd ->2pt; even->3pt
 score <- basket.ball.Jordon*c(2,3)
@@ -375,14 +375,14 @@ score.Averge.Jordon
 
 
 ## 向量物件 的元素名
-```{r}
+```r
 baskest.NBA.Jordon = c(first = 20, second = 30, third =35)
 baskest.NBA.Jordon[1]
 baskest.NBA.Jordon[2]
 baskest.NBA.Jordon[3]
 ```
 ## names( )
-```{r}
+```r
 names(baskest.NBA.Jordon)
 ## names() generate a c()->vector
 names(baskest.NBA.Jordon)[c(1,2)] = c("1st", '2nd')
@@ -390,7 +390,7 @@ names(baskest.NBA.Jordon)
 ```
 
 ## 月曆
-```{r}
+```r
 month.name # r 內建
 month.DATA = c(31,28,31,30,31,30,31,31,30,31,30,31)
 names(month.DATA) = month.name
@@ -399,13 +399,12 @@ month.DATA
 names(month.DATA[month.DATA>30])
 ```
 
-```{r}
+```r
 islands
 ## rank
 new.islands.data = sort(islands,decreasing = TRUE)
 new.islands.data
 ```
-
 
 
 
