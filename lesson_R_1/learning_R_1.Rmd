@@ -359,10 +359,47 @@ x[x<10]
 ```
 
 
+## any( ) 的運用： 只要一個TRUE = 傳回TRUE
+```{r}
+x = c(1,11,111,111,11111,999999999999999)
+any(x>999999)
+
+```
+## 不同向量長度 的向量 相成：必須是倍數關係
+```{r}
+basket.ball.Jordon<-c(1,2,3,4,5,6)
+# odd ->2pt; even->3pt
+score <- basket.ball.Jordon*c(2,3)
+
+score.Averge.Jordon <- sum(score)/6
+score.Averge.Jordon
+```
 
 
+## 向量物件 的元素名
+```{r}
+baskest.NBA.Jordon = c(first = 20, second = 30, third =35)
+baskest.NBA.Jordon[1]
+baskest.NBA.Jordon[2]
+baskest.NBA.Jordon[3]
+```
+## names( )
+```{r}
+names(baskest.NBA.Jordon)
+## names() generate a c()->vector
+names(baskest.NBA.Jordon)[c(1,2)] = c("1st", '2nd')
+names(baskest.NBA.Jordon)
+```
 
-
+## 月曆
+```{r}
+month.name # r 內建
+month.DATA = c(31,28,31,30,31,30,31,31,30,31,30,31)
+names(month.DATA) = month.name
+month.DATA
+# find day>30  
+names(month.DATA[month.DATA>30])
+```
 
 
 

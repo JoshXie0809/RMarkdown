@@ -685,6 +685,60 @@ x[x&gt;10]</code></pre>
 <pre><code>## [1]  1 NA</code></pre>
 <pre class="r"><code># NA ??!  &gt;10? or &lt;10?</code></pre>
 </div>
+<div id="any-的運用-只要一個true-傳回true" class="section level2">
+<h2>any( ) 的運用： 只要一個TRUE = 傳回TRUE</h2>
+<pre class="r"><code>x = c(1,11,111,111,11111,999999999999999)
+any(x&gt;999999)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="不同向量長度-的向量-相成必須是倍數關係" class="section level2">
+<h2>不同向量長度 的向量 相成：必須是倍數關係</h2>
+<pre class="r"><code>basket.ball.Jordon&lt;-c(1,2,3,4,5,6)
+# odd -&gt;2pt; even-&gt;3pt
+score &lt;- basket.ball.Jordon*c(2,3)
+
+score.Averge.Jordon &lt;- sum(score)/6
+score.Averge.Jordon</code></pre>
+<pre><code>## [1] 9</code></pre>
+</div>
+<div id="向量物件-的元素名" class="section level2">
+<h2>向量物件 的元素名</h2>
+<pre class="r"><code>baskest.NBA.Jordon = c(first = 20, second = 30, third =35)
+baskest.NBA.Jordon[1]</code></pre>
+<pre><code>## first 
+##    20</code></pre>
+<pre class="r"><code>baskest.NBA.Jordon[2]</code></pre>
+<pre><code>## second 
+##     30</code></pre>
+<pre class="r"><code>baskest.NBA.Jordon[3]</code></pre>
+<pre><code>## third 
+##    35</code></pre>
+</div>
+<div id="names" class="section level2">
+<h2>names( )</h2>
+<pre class="r"><code>names(baskest.NBA.Jordon)</code></pre>
+<pre><code>## [1] &quot;first&quot;  &quot;second&quot; &quot;third&quot;</code></pre>
+<pre class="r"><code>## names() generate a c()-&gt;vector
+names(baskest.NBA.Jordon)[c(1,2)] = c(&quot;1st&quot;, '2nd')
+names(baskest.NBA.Jordon)</code></pre>
+<pre><code>## [1] &quot;1st&quot;   &quot;2nd&quot;   &quot;third&quot;</code></pre>
+</div>
+<div id="月曆" class="section level2">
+<h2>月曆</h2>
+<pre class="r"><code>month.name # r 內建</code></pre>
+<pre><code>##  [1] &quot;January&quot;   &quot;February&quot;  &quot;March&quot;     &quot;April&quot;     &quot;May&quot;       &quot;June&quot;     
+##  [7] &quot;July&quot;      &quot;August&quot;    &quot;September&quot; &quot;October&quot;   &quot;November&quot;  &quot;December&quot;</code></pre>
+<pre class="r"><code>month.DATA = c(31,28,31,30,31,30,31,31,30,31,30,31)
+names(month.DATA) = month.name
+month.DATA</code></pre>
+<pre><code>##   January  February     March     April       May      June      July    August 
+##        31        28        31        30        31        30        31        31 
+## September   October  November  December 
+##        30        31        30        31</code></pre>
+<pre class="r"><code># find day&gt;30  
+names(month.DATA[month.DATA&gt;30])</code></pre>
+<pre><code>## [1] &quot;January&quot;  &quot;March&quot;    &quot;May&quot;      &quot;July&quot;     &quot;August&quot;   &quot;October&quot;  &quot;December&quot;</code></pre>
+</div>
 </div>
 
 
