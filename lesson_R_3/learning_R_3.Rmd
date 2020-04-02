@@ -59,6 +59,8 @@ which(str2.order >= 'B')#成績B or 以上
 ```{r}
 first.factor
 table(first.factor)
+str2.order
+table(str2.order)
 ```
 
 
