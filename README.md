@@ -1,9 +1,10 @@
+
 - [ ] 完成
-- [x] 未完成
+- [x] <font style="color:red">未完成</font>
 
 
-University |  Name   | StudentID |   HW 
-:----------|:--------|:----------|:------
- NCKU      | JoshXie | D54079012 | R_learning
+University  |  Name    | StudentID  |   HW 
+:---------- |:-------- |:---------- |:------
+ NCKU       | JoshXie  | D54079012  | R_learning
 
 
