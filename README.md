@@ -1,5 +1,5 @@
-- [ ] <font style="color:blue">完成</font>
-- [x] <font style="color:red">未完成</font>
+- [ ] 完成
+- [x] 未完成
 
 ---
 University: NCKU
