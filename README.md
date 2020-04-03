@@ -1,7 +1,7 @@
-
-- [ ] 完成
-- [x] <font style="color:red">未完成</font>
-
+---
+- [ ] : 完成
+- [x] : <font style="color:red">未完成</font>
+---
 
 University  |  Name    | StudentID  |   HW 
 :---------- |:-------- |:---------- |:------
