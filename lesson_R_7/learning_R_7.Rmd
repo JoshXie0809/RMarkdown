@@ -21,6 +21,6 @@ print(percentage(x))
 ```{r}
 source('./func/percentage2.R')
 x = c(0.3321, 0.98201, 0.521)
-print(percentage2(x,3))
+print(percentage2(x,3))# 2 parameters
 ```
 ![](./fun_fig/fig3.png){}
