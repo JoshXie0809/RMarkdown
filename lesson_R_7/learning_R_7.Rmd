@@ -7,10 +7,13 @@ output: html_document
 
 # Function
 
-![func_1](./fun_fig/percentage_func.png)
+![](./fun_fig/fig1.png)
 
 ```{r}
 source('./func/percentage.R')
-percentage(123.34212)
+percentage(c(0.3321, 0.98201, 0.521))
 ```
 
+- [x] function is also an object
+
+![](./fun_fig/fig2.png){}
