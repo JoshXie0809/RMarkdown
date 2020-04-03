@@ -4,5 +4,5 @@
 percentage<-function(x, na.rm = T)
 {
   x.percentage<-round(x*100,digits = 2)
-  paste(x.percentage,"%",sep = '')
+  x.final <- paste(x.percentage,"%",sep = '')
 }

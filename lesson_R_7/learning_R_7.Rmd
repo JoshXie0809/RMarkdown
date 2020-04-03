@@ -11,9 +11,16 @@ output: html_document
 
 ```{r}
 source('./func/percentage.R')
-percentage(c(0.3321, 0.98201, 0.521))
+x = c(0.3321, 0.98201, 0.521)
+print(percentage(x))
 ```
 
 - [x] function is also an object
 
 ![](./fun_fig/fig2.png){}
+```{r}
+source('./func/percentage2.R')
+x = c(0.3321, 0.98201, 0.521)
+print(percentage2(x,3))
+```
+![](./fun_fig/fig3.png){}
