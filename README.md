@@ -1,6 +1,6 @@
 
-- [ ] : 完成
-- [x] : 未完成
+- [ x ] : 完成
+- [ ] : 未完成
 
 
 University  |  Name    | StudentID  |   HW 
