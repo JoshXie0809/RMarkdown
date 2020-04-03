@@ -4,3 +4,80 @@ author: "謝錚奇＿D54079012"
 date: "2020/4/3"
 output: html_document
 ---
+# basic
+
+## if
+```{r}
+# if loop:
+# if's statement is True
+#   go into the loop
+#   wrong: skip the if loop code
+
+x = 100
+if(x >= 50)
+{
+   print(x>=50)#邏輯值->TRUE go into the loop
+   print('x>=50')
+}
+
+if (x>1000)
+{
+  print(x>1000)#邏輯值->False donot go into the loop
+  print('x>1000')
+}else
+{
+  print(!(x > 1000))
+   print('! (x > 1000 )')
+}
+  
+## ifelse(statement, state.is.True do,   state.is.False do)
+state1 <- ifelse(x>1000, ("x>1000"), ("x>1000 is wrong"))
+
+```
+
+##  switch
+
+```{r}
+x = 10
+
+
+## set type form
+if(x >= 100 ) type <- 1
+if(0 <= x & x< 100 ) type <- 2
+if( x < 0) type <- 3
+
+
+switch(type,
+       "x >= 100",
+       "0 <= x < 100",
+       "x < 0" )
+```
+ 
+## for loop
+```{r}
+x <- 0
+for (i in 1:100)
+{
+  x <- x + i
+}
+x
+```
+## while loop
+```{r}
+c <- 0
+x <- 0
+while(T){
+  if (c == 100)  break
+  c = c + 1
+  x = x + c
+}
+
+x
+
+```
+
+## next
+```{r}
+n <- 1:100
+sum( n[n %% 2 == 1] )
+```
